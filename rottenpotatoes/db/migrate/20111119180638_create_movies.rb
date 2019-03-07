@@ -14,4 +14,10 @@ class CreateMovies < ActiveRecord::Migration
   def down
     drop_table :movies
   end
+
+  def change
+    add_column :movies, :director, :string
+    #Ex:- add_column("admin_users", "username", :string, :limit =>25, :after => "email")
+  end
+
 end
